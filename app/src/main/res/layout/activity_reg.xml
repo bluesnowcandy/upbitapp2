@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="fill_parent"
+        android:height="120dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text=" 키 입력(업비트 access,secret 키 입력)" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:height="20dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/akey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="access key를 입력하세요(access key) " />
+    <TextView
+        android:layout_width="fill_parent"
+        android:height="20dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/skey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="secret key를 입력하세요(secret key) " />
+    <TextView
+        android:layout_width="fill_parent"
+        android:height="40dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:height="40dp"
+        android:id="@+id/reg_tv_ipaddr"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:height="40dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/regtt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="확인" />
+    <Button
+        android:id="@+id/regcancle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="취소" />
+</LinearLayout>

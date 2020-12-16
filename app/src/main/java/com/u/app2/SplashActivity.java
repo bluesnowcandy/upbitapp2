@@ -17,6 +17,8 @@ import com.u.app2.errors.errorsActivity;
 import com.u.app2.getInfo.getDevicesInfo;
 import com.u.app2.gong.c001;
 import com.u.app2.httpconnect.RequestHttpURLConnection;
+import com.u.app2.reg.regActivity;
+import com.u.app2.wal.walActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -254,16 +256,16 @@ public class SplashActivity extends AppCompatActivity {
             }else if(!retcode.equals("V000")){
                 Log.d(TAG, "seo::001>>1" +retcode);
                 //망했다.
-                //Intent intent = new Intent (SplashActivity.this,errorsActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent (SplashActivity.this,errorsActivity.class);
+                startActivity(intent);
                 finish();
                 return;
             }else if(keycnt.equals("0") || regdeviceid.equals("Y")){
                 Log.d(TAG, "seo::001>>2 [등록페이지로 이동]");
                 //등록페이지로 이동.
-                //Intent intent = new Intent (SplashActivity.this, regActivity.class);
-                //intent.putExtra("ipaddr",ipaddr);
-                //startActivity(intent);
+                Intent intent = new Intent (SplashActivity.this, regActivity.class);
+                intent.putExtra("ipaddr",ipaddr);
+                startActivity(intent);
 
                 loop = false;
                 SplashActivity.this.finish();
@@ -272,8 +274,8 @@ public class SplashActivity extends AppCompatActivity {
             }else if (keycnt.equals("1")){
                 Log.d(TAG, "seo::001>>3 [지갑조회페이지로 이동]");
                 //지갑조회페이지로 이동.
-                //Intent intent = new Intent (SplashActivity.this , walActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent (SplashActivity.this , walActivity.class);
+                startActivity(intent);
 
                 loop = false;
                 SplashActivity.this.finish();

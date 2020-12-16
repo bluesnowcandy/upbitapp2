@@ -10,8 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name="com.u.app2.errors.errorsActivity"></activity>
+        <activity android:name="com.u.app2.wal.pop.order.PopupOrderActivity"></activity>
+        <activity android:name="com.u.app2.wal.pop.config.PopupConfigActivity"></activity>
+        <activity android:name="com.u.app2.wal.pop.vlist.PopupVlistActivity"></activity>
+        <activity android:name="com.u.app2.wal.walActivity"></activity>
+        <activity android:name="com.u.app2.reg.regActivity" />
+        <activity android:name="com.u.app2.errors.errorsActivity" />
         <activity android:name="com.u.app2.MainActivity"></activity>
         <activity  android:name=".SplashActivity" android:label="@string/app_name">
             <intent-filter>
