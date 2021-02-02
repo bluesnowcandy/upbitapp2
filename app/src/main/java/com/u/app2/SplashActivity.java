@@ -181,7 +181,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 jsonObject.put("version" , app_version);
                 jsonObject.put("stcode" , "VERC");
-                jsonObject.put("deviceid" , device_id);
+                jsonObject.put("device_id" , device_id);
 
                 String reqsdatasend = jsonObject.toString();
 

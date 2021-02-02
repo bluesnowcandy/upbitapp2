@@ -39,7 +39,7 @@ public class walActivity extends AppCompatActivity {
     String TAG = "walActivity";
 
     walAdpter myadapter;
-    String deviceid = "";
+    String device_id = "";
     String popcurrency = "";
 
     ContentValues pams = new ContentValues();
@@ -50,8 +50,8 @@ public class walActivity extends AppCompatActivity {
 
         Log.d(TAG, "walActivity :seo::>> start ");
         SharedPreferences sf = getSharedPreferences(c001.SharedPreferencesName1,MODE_PRIVATE);
-        deviceid = sf.getString("deviceid","").toString();
-        Log.d(TAG, "walActivity :seo::>> getdeviceid[" + deviceid + "]");
+        device_id = sf.getString("device_id","").toString();
+        Log.d(TAG, "walActivity :seo::>> getdeviceid[" + device_id + "]");
 
         setContentView(R.layout.activity_wal);
 
@@ -65,7 +65,7 @@ public class walActivity extends AppCompatActivity {
         try {
 
             jsonObject.put("stcode" , "DGREH");
-            jsonObject.put("deviceid" , deviceid);
+            jsonObject.put("device_id" , device_id);
             //Log.d(TAG, "seo::22222");
         } catch (JSONException e) {
 
@@ -258,7 +258,7 @@ public class walActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, PopupOrderActivity.class);
         intent.putExtra("currency", popcurrency);
-        intent.putExtra("deviceid", deviceid);
+        intent.putExtra("device_id", device_id);
         intent.putExtra("all", "Y");
         popcurrency = "";
         startActivity(intent);
@@ -278,7 +278,7 @@ public class walActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, PopupOrderActivity.class);
         intent.putExtra("currency", popcurrency);
-        intent.putExtra("deviceid", deviceid);
+        intent.putExtra("device_id", device_id);
         intent.putExtra("all", "Y");
         popcurrency = "";
         startActivity(intent);
@@ -291,13 +291,13 @@ public class walActivity extends AppCompatActivity {
      */
     public void configpopup(){
 
-        Log.d(TAG, ":seo::>> configpopup ");
+        Log.d(TAG, ":seo::>> configpopup ["  +device_id + "]");
 
         if (popcurrency== null || popcurrency.equals("")){return;}
 
         Intent intent = new Intent(this, PopupConfigActivity.class);
         intent.putExtra("currency", popcurrency);
-        intent.putExtra("deviceid", deviceid);
+        intent.putExtra("device_id", device_id);
         popcurrency = "";
         startActivity(intent);
 
@@ -312,7 +312,7 @@ public class walActivity extends AppCompatActivity {
         //팝업창 만들기.!!!!
 
         Intent intent = new Intent(this, PopupVlistActivity.class);
-        intent.putExtra("deviceid", deviceid);
+        intent.putExtra("device_id", device_id);
         startActivity(intent);
 
 
@@ -371,7 +371,7 @@ public class walActivity extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject();
 
                 jsonObject.put("stcode" , "ERHI3");
-                jsonObject.put("deviceid" , deviceid);
+                jsonObject.put("device_id" , device_id);
 
                 String reqsdatasend = jsonObject.toString();
 
