@@ -32,7 +32,7 @@ public class PopupConfigActivity extends Activity {
     String TAG = "PopupConfigActivity";
 
     String currency = "";
-    String deviceid = "";
+    String device_id = "";
 
 
     ContentValues pams = new ContentValues();
@@ -44,7 +44,7 @@ public class PopupConfigActivity extends Activity {
         setContentView(R.layout.popup_wal_config);
 
 
-        Log.d(TAG, "seo::>> onCreate !! ");
+        Log.d(TAG, "seo::>> onCreate");
 
         //UI 객체생성
         txtText = (TextView)findViewById(R.id.configcurrency);
@@ -52,12 +52,12 @@ public class PopupConfigActivity extends Activity {
         //데이터 가져오기
         Intent intent = getIntent();
 
-        Log.d(TAG, "seo::>> onCreate !!111 ");
+        Log.d(TAG, "seo::>> onCreate get Extra[" + intent.getDataString() + "]");
         currency = intent.getStringExtra("currency");
-        deviceid = intent.getStringExtra("deviceid");
+        device_id = intent.getStringExtra("device_id");
 
 
-        Log.d(TAG, "seo::>> onCreate!![" + currency+ "][" + deviceid+ "]");
+        Log.d(TAG, "seo::>> onCreate!![" + currency+ "][" + device_id+ "]");
 
         txtText.setText(currency);
 
@@ -143,7 +143,7 @@ public class PopupConfigActivity extends Activity {
 
                 jsonObject.put("stcode" , "ERHI4");
                 jsonObject.put("currency" , currency);
-                jsonObject.put("deviceid" , deviceid);
+                jsonObject.put("device_id" , device_id);
 
                 String reqsdatasend = jsonObject.toString();
 
@@ -493,7 +493,7 @@ public class PopupConfigActivity extends Activity {
 
                 jsonObject.put("stcode" , "SDRH");
                 jsonObject.put("currency" , currency);
-                jsonObject.put("deviceid" , deviceid);
+                jsonObject.put("device_id" , device_id);
 
 
 

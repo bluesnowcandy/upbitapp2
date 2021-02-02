@@ -34,7 +34,7 @@ public class PopupOrderActivity extends Activity {
     String TAG = "PopupOrderActivity";
 
     String currency = "";
-    String deviceid = "";
+    String device_id = "";
     String all      = "";
 
     private ListView listView;
@@ -57,11 +57,11 @@ public class PopupOrderActivity extends Activity {
 
         Log.d(TAG, "seo::>> onCreate !!111 ");
         currency = intent.getStringExtra("currency");
-        deviceid = intent.getStringExtra("deviceid");
+        device_id = intent.getStringExtra("device_id");
         all      = intent.getStringExtra("all");
 
 
-        Log.d(TAG, "seo::>> onCreate!![" + currency+ "][" + deviceid+ "]");
+        Log.d(TAG, "seo::>> onCreate!![" + currency+ "][" + device_id+ "]");
 
 
         listView = (ListView)findViewById(R.id.listView);
@@ -151,7 +151,7 @@ public class PopupOrderActivity extends Activity {
             try {
 
 
-                Log.d(TAG, "NetworkTask :seo::>> start ");
+                Log.d(TAG, "NetworkTask :seo::>> start[" + device_id + "]");
 
 
                 RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
@@ -160,7 +160,7 @@ public class PopupOrderActivity extends Activity {
 
                 jsonObject.put("stcode"     , "TSRT");
                 jsonObject.put("currency"   , currency);
-                jsonObject.put("deviceid"   , deviceid);
+                jsonObject.put("device_id"  , device_id);
                 jsonObject.put("all"        , all);
 
                 String reqsdatasend = jsonObject.toString();
